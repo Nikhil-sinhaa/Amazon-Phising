@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.com. Spend less. Smile more</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/amazon.css" class="css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address border">
+                <p class="p1">Deliver to</p>
+                <div class="address-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="p2">India</p>
+                </div>
+            </div>
+
+            <div class="nav-search-bar">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+
+                <input type="text" class="search-bar" id="searchInput" placeholder="Search Amazon">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-lang border">
+                <div class="indian-flag"></div>
+                <p class="lang-p">EN</p>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+
+            <div class="nav-signup border">
+                <p><span class="span">Hello, sign up</span></p>
+                <div class="signup-icon">
+                    <p class="signup-p">Account & Lists</p>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+
+            <div class="nav-return border">
+                <p><span class="span">Returns</span></p>
+                <p>& Orders</p>
+            </div>
+
+            <!-- openCart() called on cart click -->
+            <div class="nav-cart border" onclick="openCart()">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                Cart
+                <span id="cartCount" style="font-size:11px; font-weight:bold;">(0)</span>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-options">
+
+                <div id="1div" class="panel-allmenu border">
+                    <i class="fa-solid fa-bars"></i>All
+                </div>
+                <div id="2div" class="options">
+                    <div class="border">Fresh<i class="fa-solid fa-caret-down"></i></div>
+                    <div class="border">MX Player</div>
+                    <div class="border">Sell</div>
+                    <div class="border">BestSellers</div>
+                    <div class="border">Today's Deals</div>
+                    <div class="border">Mobiles</div>
+                    <div class="border">Customer Service</div>
+                    <div class="border">New Releases</div>
+                    <div class="border">Fashion</div>
+                    <div class="border">Prime<i class="fa-solid fa-caret-down"></i></div>
+                    <div class="border">Amazon Pay</div>
+                    <div class="border">Electronics</div>
+                </div>
+
+                <div id="3div" class="panel-offers border">
+                    <p>Fastive but offers| Up to 17% + flat &#8377;100 off</p>
+                    <div class="amazon-pay"></div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-message">
+            <p>You are on amazon.com. You can also shop on amazon india for millions of products with facts local
+                delivery. <a href="https://www.amazon.in" target="_blank">Click here to go to Amazon.in</a></p>
+        </div>
+    </div>
+
+    <!-- Shop-section -->
+    <div class="shop-section">
+        <!-- Row1_Box1 -->
+        <div class="box">
+            <h2 class="box-title">Headphones & Earbuds</h2>
+
+            <div class="image-grid">
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/gaming-headphones.png" alt="">
+                    </div>
+                    <span>Gaming-headphones</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/earbuds.jpg" alt="">
+                    </div>
+                    <span>Earbuds</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/wired-earphones.png" alt="">
+                    </div>
+                    <span>wired-earphones</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/Airpods.png" alt="">
+                    </div>
+                    <span>Air-pods4</span>
+                </div>
+            </div>
+
+            <p class="see-more">Shop Now</p>
+        </div>
+
+        <!-- Row1_Box2 -->
+        <div class="box">
+            <h2 class="box-title">Kitchen Appliances</h2>
+
+            <div class="image-grid">
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/refrigerator.jpg" alt="">
+                    </div>
+                    <span>Refrigerator</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/oven.jpg" alt="">
+                    </div>
+                    <span>Oven</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/grinder.jpg" alt="">
+                    </div>
+                    <span>Grinder</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/gas-stove.jpg" alt="">
+                    </div>
+                    <span>Gas-stove</span>
+                </div>
+            </div>
+
+            <p class="see-more">Shop Now</p>
+        </div>
+
+        <!-- Row1_Box3 -->
+        <div class="box">
+            <h2 class="box-title">Fations & Clothes</h2>
+
+            <div class="image-grid">
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/saperate_b1.jpg" alt="">
+                    </div>
+                    <span>Huddy</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/clothes2.jpg" alt="">
+                    </div>
+                    <span>Bomber Windbreaker Jacket</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/clothes3.png" alt="">
+                    </div>
+                    <span>Varsity Jacket</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/clothes4.jpg" alt="">
+                    </div>
+                    <span>Duffle Coat</span>
+                </div>
+            </div>
+
+            <p class="see-more">Shop Now</p>
+        </div>
+
+        <!-- Row1_Box4 -->
+        <div class="box">
+            <h2 class="box-title">Shoes Mens & Womens</h2>
+
+            <div class="image-grid">
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/shoes1.jpg" alt="">
+                    </div>
+                    <span>Adidas</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/shoes2.jpg" alt="">
+                    </div>
+                    <span>Nike</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/shoes3.png" alt="">
+                    </div>
+                    <span>For Mens</span>
+                </div>
+
+                <div class="grid-item">
+                    <div class="img-container">
+                        <img src="/static/img/shoes4.jpg" alt="">
+                    </div>
+                    <span>For Womens</span>
+                </div>
+            </div>
+
+            <p class="see-more">Shop Now</p>
+        </div>
+
+        <!-- Row2_Full-row-Coldrink -->
+        <div class="full-row-section">
+
+            <h2 class="full-row-title">
+                Best Sellers in Cold Drinks
+            </h2>
+
+            <div class="product-row" id="productGrid">
+                <!-- renderProducts() will populate this if called from backend -->
+                <div class="product-item"><img src="/static/img/coldrink1.jpg"></div>
+                <div class="product-item"><img src="/static/img/coldrink2.jpg"></div>
+                <div class="product-item"><img src="/static/img/coldrink3.jpg"></div>
+                <div class="product-item"><img src="/static/img/coldrink4.jpg"></div>
+                <div class="product-item"><img src="/static/img/coldrink5.jpg"></div>
+                <div class="product-item"><img src="/static/img/coldrink6.jpg"></div>
+                <div class="product-item"><img src="/static/img/coldrink7.jpg"></div>
+                <div class="product-item"><img src="/static/img/coldrink8.jpg"></div>
+                <div class="product-item"><img src="/static/img/coldrink9.jpg"></div>
+            </div>
+
+        </div>
+
+        <!-- Row3_Full-row-Books -->
+        <div class="full-row-section">
+
+            <h2 class="full-row-title">
+                Best Sellers in books
+            </h2>
+
+            <div class="product-row">
+                <div class="product-item"><img src="/static/img/book1.jpg"></div>
+                <div class="product-item"><img src="/static/img/book2.jpg"></div>
+                <div class="product-item"><img src="/static/img/book3.jpg"></div>
+                <div class="product-item"><img src="/static/img/book4.jpg"></div>
+                <div class="product-item"><img src="/static/img/book5.jpg"></div>
+                <div class="product-item"><img src="/static/img/book6.jpg"></div>
+                <div class="product-item"><img src="/static/img/book7.jpg"></div>
+                <div class="product-item"><img src="/static/img/book8.jpg"></div>
+                <div class="product-item"><img src="/static/img/book9.jpg"></div>
+                <div class="product-item"><img src="/static/img/book10.jpg"></div>
+            </div>
+
+        </div>
+
+        <!-- Row4-Saperate-Boxes -->
+        <div class="box">
+            <div class="box-content">
+                <h2>Best Clothes & Brands</h2>
+                <div class="box-img" style="background-image: url('/static/img/saperate_b1.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>15% off on Home Furniture</h2>
+                <div class="box-img" style="background-image: url('/static/img/saperate_b2.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Latest Smartphones</h2>
+                <div class="box-img" style="background-image: url('/static/img/saperate_b3.png');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Stylish Sneakers</h2>
+                <div class="box-img" style="background-image: url('/static/img/saperate_b4.png');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Health-care Products</h2>
+                <div class="box-img" style="background-image: url('/static/img/saperate_b5.png');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Tool-Box</h2>
+                <div class="box-img" style="background-image: url('/static/img/saperate_b6.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Beauty-Brands</h2>
+                <div class="box-img" style="background-image: url('/static/img/saperate_b7.png');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Children toy's</h2>
+                <div class="box-img" style="background-image: url('/static/img/saperate_b8.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-panel1">
+            Back to top
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a href="#">About Amazon</a>
+                <a href="#">Careers</a>
+                <a href="#">Press Releases</a>
+                <a href="#">Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Connect with Us</p>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                <a href="#">Sell on Amazon</a>
+                <a href="#">Sell under Amazon Accelerator</a>
+                <a href="#">Protect and Build Your Brand</a>
+                <a href="#">Amazon Global Selling</a>
+                <a href="#">Supply to Amazon</a>
+                <a href="#">Become an Affiliate</a>
+                <a href="#">Fulfilment by Amazon</a>
+                <a href="#">Advertise Your Products</a>
+                <a href="#">Amazon Pay on Merchants</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a href="#">Your Account</a>
+                <a href="#">Returns Centre</a>
+                <a href="#">Recalls and Product Safety Alerts</a>
+                <a href="#">100% Purchase Protection</a>
+                <a href="#">Amazon App Download</a>
+                <a href="#">Help</a>
+            </ul>
+        </div>
+
+        <div class="foot-panel3">
+            <div class="logo"></div>
+            <div class="footer-options">
+                <div class="lang-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>English</span>
+                    <i class="fa-solid fa-sort"></i>
+                </div>
+                <div class="country-box">
+                    <img src="/static/img/indo-flag.png" alt="" width="18px">
+                    <span>India</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+         NYKAA FUNCTION NAMES — wired to Amazon UI elements
+         All function names match Nykaa backend exactly.
+         Only the names are changed; logic/behaviour is the
+         same as the original Amazon + Nykaa script.js code.
+    ====================================================== -->
+    <script>
+        /* ---------- state ---------- */
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let allProducts = [];
+        let currentSlide = 0;
+        let monitorActive = false;
+
+        /* ---------- loadProducts ----------
+           Called on page load. Fetches / sets product data.
+           Mirrors Nykaa's loadProducts() signature exactly. */
+        function loadProducts() {
+            // Default static products — backend can override via renderProducts()
+            allProducts = [
+                { id: 1, name: "Gaming Headphones", price: 2999, image: "/static/img/gaming-headphones.png", brand: "Sony", rating: 4.5 },
+                { id: 2, name: "Wireless Earbuds",  price: 1999, image: "/static/img/earbuds.jpg",           brand: "boAt", rating: 4.3 },
+                { id: 3, name: "Wired Earphones",   price: 799,  image: "/static/img/wired-earphones.png",   brand: "JBL",  rating: 4.1 },
+                { id: 4, name: "AirPods 4",         price: 4999, image: "/static/img/Airpods.png",           brand: "Apple",rating: 4.8 },
+            ];
+            renderProducts(allProducts);
+        }
+
+        /* ---------- renderProducts ----------
+           Accepts a products array and injects cards into
+           #productGrid — same signature as Nykaa's version. */
+        function renderProducts(products) {
+            const grid = document.getElementById('productGrid');
+            if (!grid) return;
+            grid.innerHTML = products.map(product => `
+                <div class="product-item" style="cursor:pointer;">
+                    <img src="${product.image}" alt="${product.name}"
+                         style="width:100%; height:auto; border-radius:4px;">
+                    <p style="font-size:12px; margin:4px 0 2px;">${product.name}</p>
+                    <p style="font-size:12px; font-weight:bold;">&#8377;${product.price}</p>
+                    <button
+                        onclick="addToCart(${product.id}, '${product.name.replace(/'/g,"\\'")}', ${product.price}, '${product.image}')"
+                        style="margin-top:4px; padding:4px 10px; background:#e91e63;
+                               color:white; border:none; border-radius:4px;
+                               font-size:11px; cursor:pointer;">
+                        Add to Cart
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        /* ---------- addToCart ---------- */
+        function addToCart(id, name, price, image) {
+            const existing = cart.find(item => item.id === id);
+            if (existing) existing.quantity++;
+            else cart.push({ id, name, price, image, quantity: 1 });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            alert(name + ' added to cart!');
+        }
+
+        /* ---------- updateCartCount ---------- */
+        function updateCartCount() {
+            const el = document.getElementById('cartCount');
+            if (el) el.textContent = '(' + cart.reduce((s, i) => s + i.quantity, 0) + ')';
+        }
+
+        /* ---------- openCart ---------- */
+        function openCart() {
+            let html = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                html += `
+                    <div style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #eee;">
+                        <img src="${item.image}" style="width:60px;height:60px;object-fit:cover;border-radius:4px;">
+                        <div style="flex:1;">
+                            <p style="font-size:13px;">${item.name}</p>
+                            <p style="font-size:12px;color:#555;">&#8377;${item.price} × ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeFromCart(${index})"
+                                style="color:red;background:none;border:none;cursor:pointer;font-size:12px;">
+                            Remove
+                        </button>
+                    </div>`;
+            });
+
+            const modal = document.getElementById('cartModal');
+            document.getElementById('cartItems').innerHTML =
+                html || '<p style="text-align:center;padding:20px;color:#aaa;">Your cart is empty</p>';
+            document.getElementById('cartTotal').textContent = '&#8377;' + total;
+            modal.style.display = 'flex';
+        }
+
+        /* ---------- closeCart ---------- */
+        function closeCart() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+
+        /* ---------- removeFromCart ---------- */
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            openCart();
+        }
+
+        /* ---------- checkout ---------- */
+        function checkout() {
+            alert('Thank you! This is a demo — order placed successfully 🎉');
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            closeCart();
+            updateCartCount();
+        }
+
+        /* ---------- renderHero ----------
+           Mirrors Nykaa's renderHero(). Amazon has a static
+           hero bar, so this is a no-op stub ready for the
+           backend to override with slide data. */
+        function renderHero() {
+            // Backend can call renderHero(slides) to inject a carousel
+        }
+
+        /* ---------- updateHeroSlide ---------- */
+        function updateHeroSlide() {
+            // Stub — backend hooks in here for carousel transitions
+        }
+
+        /* ---------- handleScroll ----------
+           Doubles as the search handler (same as Nykaa). */
+        function handleScroll() {
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = allProducts.filter(p =>
+                p.name.toLowerCase().includes(term) ||
+                (p.brand && p.brand.toLowerCase().includes(term))
+            );
+            renderProducts(filtered.length ? filtered : allProducts);
+        }
+
+        /* ---------- toggleMonitor ---------- */
+        function toggleMonitor() {
+            monitorActive = !monitorActive;
+            const btn = document.getElementById('monitorBtn');
+            if (btn) {
+                btn.textContent = monitorActive ? 'Stop Monitoring' : 'Start Monitoring';
+                btn.style.background = monitorActive ? '#f44336' : '#4caf50';
+            }
+        }
+
+        /* ---------- runBackend ---------- */
+        function runBackend() {
+            console.log("Search triggered - Starting controller...");
+            fetch("/run")
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Controller response:", data);
+                })
+                .catch(err => console.error("Controller error:", err));
+        }
+
+        /* ---------- search input listener ---------- */
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', handleScroll);
+            searchInput.addEventListener('focus', runBackend);
+        }
+
+        /* ---------- init ---------- */
+        window.onload = () => {
+            renderHero();
+            loadProducts();
+            updateCartCount();
+        };
+    </script>
+
+    <!-- Cart Modal (minimal, Amazon-style) -->
+    <div id="cartModal"
+         style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55);
+                z-index:9999; align-items:center; justify-content:center;">
+        <div style="background:white; width:90%; max-width:480px; border-radius:8px;
+                    overflow:hidden; max-height:80vh; display:flex; flex-direction:column;">
+            <div style="padding:14px 18px; border-bottom:1px solid #eee;
+                        display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="font-size:18px; font-weight:bold;">Shopping Cart</h3>
+                <button onclick="closeCart()"
+                        style="font-size:22px; background:none; border:none; cursor:pointer;">×</button>
+            </div>
+            <div id="cartItems" style="padding:14px 18px; overflow-y:auto; flex:1;"></div>
+            <div style="padding:14px 18px; border-top:1px solid #eee;">
+                <div style="display:flex; justify-content:space-between;
+                            font-weight:bold; margin-bottom:12px;">
+                    <span>Total</span>
+                    <span id="cartTotal">&#8377;0</span>
+                </div>
+                <button onclick="checkout()"
+                        style="width:100%; background:#e91e63; color:white; border:none;
+                               padding:12px; border-radius:6px; font-size:15px;
+                               font-weight:bold; cursor:pointer;">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
+
+

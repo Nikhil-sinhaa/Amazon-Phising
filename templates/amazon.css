@@ -1,0 +1,445 @@
+*{
+    margin: 0px;
+    border: border-box;
+}
+
+.border{
+    border: 1.5px solid transparent;
+}
+.border:hover{
+    border: 1.5px solid white;
+}
+
+.fa-solid.fa-caret-down {
+    color: #cccccc;
+    font-size: 12px;
+}
+
+/** navbar **/
+.navbar{
+    height: 60px;
+    color: white;
+    background-color: #0f1111;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+} 
+
+/* navbar-logo */
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+.logo{
+    height: 50px;
+    width: 100%;
+    background-image: url("/static/img/nav-logo.png");
+    background-size: cover;
+}
+
+/* location */
+.address-icon{
+    display: flex;
+    align-items: center;
+}
+.p1{
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-left: 20px;
+}
+.p2{
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* nav-Search-bar */
+.nav-search-bar{
+    height: 40px;
+    width: 602px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#fdb85e;
+    border-radius: 4px;
+}
+.nav-search-bar:hover{
+   outline: 2.3px solid #fdb85e;
+}
+.search-select{
+    width: 50px;
+    background-color: #E6E6E6;
+
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+.search-bar{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+.search-icon{
+    width: 45px;
+    color: #0f1111;
+    font-size: 1.3rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* nav-language-bar */
+.nav-lang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.indian-flag{
+    height: 16px;
+    width: 24px;
+    margin-right: 6px;
+    background-image: url("/static/img/indo-flag.png");
+    background-size: cover;
+    background-position: center;
+}
+.lang-p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* nav-sign-up */
+.span{
+    font-size:0.83rem;
+}
+.signup-p{
+    font-size: 1.0rem;
+    font-weight: 700;
+}
+.signup-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-icon i{
+    color: #cccccc;
+    font-size: 12px;
+}
+
+/* nav-returns */
+.nav-returns p{
+    color: #cccccc;
+    font-size: 12px;
+}
+
+/* nav-cart */
+.nav-cart i{
+    font-size: 30px;
+}
+.nav-cart{
+    font-size: 1.0rem;
+    font-weight: 400;
+}
+
+/** Panel-slot**/
+.panel{
+    height: 40px;
+    color: white;
+    background-color: #222f3d;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.panel-options{
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.options{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 13px;   
+}
+.panel-offers{
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.amazon-pay{
+    height: 39px;
+    width: 39px;
+    background-image: url("/static/img/amazon-pay.png");
+    background-size: cover;
+}
+
+/** hero-section **/
+.hero-section{
+    height: 350px;
+    background-image: url("/static/img/hero-sectionimg.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/** hero-message **/
+.hero-message{
+    height: 40px;
+    width: 97.5%;
+    color: black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    
+}
+.hero-message a{
+    color: #007185;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+
+/** Shop-Section **/
+.shop-section{
+    min-height: 700px;
+    background-image: url("/static/img/black-white\ -\ Copy.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+/* Box1 */
+.box {
+    background-color: white;
+    width: 24%;
+    height: 420px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.box-title {
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0F1111;
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 10px;
+    margin-bottom: 15px;
+}
+
+
+.grid-item {
+    cursor: pointer;
+}
+
+
+.img-container {
+    height: 120px;
+    background-color: white;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.grid-item span {
+    font-size: 12px;
+    color: #0F1111;
+    display: block;
+    margin-top: 4px;
+}
+
+
+.see-more {
+    font-size: 13px;
+    color: #007185;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.see-more:hover {
+    color: #C7511F;
+    text-decoration: underline;
+}
+
+/** Full-row-section **/
+
+.full-row-section{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.full-row-title{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.product-row{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;   /* horizontal scroll */
+}
+
+.product-item{
+    min-width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.product-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/** Saperate-box **/
+/* Single Image Box */
+.box{
+    background-color: white;
+    width: 24%;              /* same as tumhara pehle */
+    height: 420px;           /* same height */
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-content h2{
+    font-size: 21px;
+    font-weight: 700;
+    color: #0F1111;
+    margin-bottom: 15px;
+}
+
+/* Image */
+.box-img{
+    height: 300px;           /* image bada hoga */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Shop now text */
+.box-content p{
+    font-size: 13px;
+    color: #007185;
+    cursor: pointer;
+}
+
+.box-content p:hover{
+    color: #C7511F;
+    text-decoration: underline;
+}
+
+/** Footer **/
+/* Back to Top bar */
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.foot-panel1:hover {
+    background-color: #485769;
+}
+
+/* Middle Links Section */
+.foot-panel2 {
+    background-color: #232f3e;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+    border-bottom: 0.1px solid #485769;
+}
+
+.foot-panel2 ul p {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.foot-panel2 ul a {
+    display: block;
+    font-size: 0.85rem;
+    color: #DDDDDD;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.foot-panel2 ul a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom Logo & Dropdowns */
+.foot-panel3 {
+    background-color: #232f3e;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.foot-panel3 .logo {
+    background-image: url("/static/img/nav-logo.png");
+    background-size: cover;
+    height: 30px;
+    width: 80px;
+    margin-top: 10px;
+}
+
+.footer-options {
+    display: flex;
+    gap: 10px;
+}
+
+.lang-box, .country-box {
+    border: 1px solid #848688;
+    color: #CCCCCC;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
